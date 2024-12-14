@@ -16,16 +16,18 @@
         h1 {
             font-size: 10vw; /* Scales with viewport width */
             margin: 0;
-            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
-            background-size: 300% 100%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: rainbow 10s linear infinite;
+            color: red; /* Default text color */
+            animation: colorchange 3s infinite;
         }
 
-        @keyframes rainbow {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
+        @keyframes colorchange {
+            0% { color: red; }
+            16.6% { color: orange; }
+            33.3% { color: yellow; }
+            50% { color: green; }
+            66.6% { color: blue; }
+            83.3% { color: indigo; }
+            100% { color: violet; }
         }
     </style>
 </head>

@@ -19,19 +19,19 @@
         h1 {
             font-size: 10vw; /* Scales with viewport width */
             margin: 0;
-            color: red; /* Default text color */
-            animation: colorchange 5s infinite;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: smoothRainbow 6s infinite linear;
         }
-        @keyframes colorchange {
-            0% { color: red; }
-            16.6% { color: orange; }
-            33.3% { color: yellow; }
-            50% { color: green; }
-            66.6% { color: blue; }
-            83.3% { color: indigo; }
-            90% { color: violet; }
-            100% { color: red; }
+
+        @keyframes smoothRainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
+
         .bottom-right {
             position: absolute;
             bottom: 10px;
